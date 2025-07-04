@@ -6,21 +6,29 @@ Modbus client and server command line tools based on libmodbus.
 NOTE:
 Both apps are linked with libmodbus library. After repository is pulled do the following:
 
+Linux preliminaries
+===========
+
+```sh
+sudo apt install libmodbus-dev
+```
+
 compilation
 ===========
 
 ```sh
-make
+mkdir build
+cd build
+cmake ..
+cmake --build .
 ```
 
 running
 =======
 
-If modbus libraries are not in a default location (either it's needed to move libraries to app location or set
-appropriate environment variable):
-- on linux it would be:
-  1) LD_LIBRARY_PATH=./libmodbus/src/.libs/ ./mbClient OR
-  2) export LD_LIBRARY_PATH=./libmodbus/src/.libs/ and then run ./mbClient
+```sh
+./modbus_client
+```
 
 usage
 =====
